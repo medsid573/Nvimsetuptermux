@@ -34,6 +34,21 @@ else
     echo "❌ Neovim is NOT installed."
 fi
 
+# Check Compilation Tools (for Treesitter)
+echo ""
+echo "--- Checking Compilation Tools ---"
+if command -v clang >/dev/null 2>&1; then
+    echo "✅ clang is installed"
+else
+    echo "❌ clang is NOT installed. Run: pkg install clang"
+fi
+
+if command -v make >/dev/null 2>&1; then
+    echo "✅ make is installed"
+else
+    echo "❌ make is NOT installed. Run: pkg install make"
+fi
+
 # Check Config Files
 echo ""
 echo "--- Checking Config Files ---"
